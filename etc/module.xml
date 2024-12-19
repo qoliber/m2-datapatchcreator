@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+/**
+ * Copyright © Qoliber. All rights reserved.
+ *
+ * @category    Qoliber
+ * @package     Qoliber_DataPatchCreator
+ * @author      Jakub Winkler <jwinkler@qoliber.com
+ * @author      Sebastian Strojwas <sstrojwas@qoliber.com>
+ * @author      Wojciech M. Wnuk <wwnuk@qoliber.com>
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Qoliber_DataPatchCreator">
+        <sequence>
+            <module name="Magento_Catalog" />
+            <module name="Magento_CatalogRule" />
+            <module name="Magento_Cms" />
+            <module name="Magento_Config" />
+            <module name="Magento_SalesRule" />
+            <module name="Qoliber_Core" />
+        </sequence>
+    </module>
+</config>

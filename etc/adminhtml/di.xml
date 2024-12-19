@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+/**
+ * Copyright © Qoliber. All rights reserved.
+ *
+ * @category    Qoliber
+ * @package     Qoliber_DataPatchCreator
+ * @author      Jakub Winkler <jwinkler@qoliber.com
+ * @author      Sebastian Strojwas <sstrojwas@qoliber.com>
+ * @author      Wojciech M. Wnuk <wwnuk@qoliber.com>
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Magento\Config\Block\System\Config\Edit"
+                type="Qoliber\DataPatchCreator\Block\System\Config\Edit"/>
+
+    <preference for="Magento\Catalog\Block\Adminhtml\Product\Attribute\Edit"
+                type="Qoliber\DataPatchCreator\Block\Adminhtml\Product\Attribute\Edit" />
+
+    <preference for="Magento\Catalog\Block\Adminhtml\Product\Attribute\Grid"
+                type="Qoliber\DataPatchCreator\Block\Adminhtml\Product\Attribute\Grid" />
+</config>

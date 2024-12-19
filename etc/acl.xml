@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+/**
+ * Copyright © Qoliber. All rights reserved.
+ *
+ * @category    Qoliber
+ * @package     Qoliber_DataPatchCreator
+ * @author      Jakub Winkler <jwinkler@qoliber.com
+ * @author      Sebastian Strojwas <sstrojwas@qoliber.com>
+ * @author      Wojciech M. Wnuk <wwnuk@qoliber.com>
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="Qoliber_DataPatchCreator::config" title="Qoliber: DataPatch Creator" sortOrder="2000"/>
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

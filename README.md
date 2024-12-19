@@ -10,20 +10,21 @@ This module allows you to create `PHP Data Patch Files` in Magento 2 Admin panel
 them to `PHP` files which you can add to your code repositories.
 
 ### Important:
+
 #### <span style="color:red ">This main version of the module **does not work with `PageBuilder` to assure `2.3.x` version compatibility**.</span>
 
-If you want to make it work with `PageBuilder` from **Magento 2.4.3** it is required to install additional composer package: 
+If you want to make it work with `PageBuilder` from **Magento 2.4.3** it is required to install additional composer package:
 ```
-enanobots/m2-datapatchcreator-pagebuilder
+qoliber/datapatchcreator-pagebuilder
 ```
-Details: https://github.com/enanobots/m2-datapatchcreator-pagebuilder-compatibility
+Details: https://github.com/qoliber/datapatchcreator-pagebuilder-compatibility
 
 
 ### Installation
 
 Installation is via `composer`
 ```
-composer require enanobots/m2-datapatchcreator
+composer require qoliber/datapatchcreator
 ```
 
 After installing the packages just run:
@@ -32,7 +33,7 @@ php bin/magento setup:upgrade
 ```
 
 ### Requirements:
-* `PHP 7.3` and higher
+* `PHP 8.1` and higher
 * `Magento 2.3.x` and higher
 
 ### Tested on:
@@ -40,6 +41,7 @@ php bin/magento setup:upgrade
 * `Magento 2.4.x` OpenSource
 
 #### Available Data Types for data patches:
+
 * Product Attributes (with image swatches sync)
 * CMS Pages
 * CMS Blocks
@@ -47,10 +49,12 @@ php bin/magento setup:upgrade
 * *more to come in future releases*
 
 ### How to create data patches?
+
 You do everything in Magento 2 admin panel. :)
 
 There are 2 ways to create Magento 2 Data Patch files:
-* direct download (**DEFAULT OPTION**): 
+
+* direct download (**DEFAULT OPTION**):
   * for a single entity, a `PHP` file is generated
   * for sets of data patch files (Mass Exports), a `ZIP` file containing patch files is generated
 * local files:
@@ -60,17 +64,20 @@ There are 2 ways to create Magento 2 Data Patch files:
 
 Module allows images synchronization between Magento 2 store copies.\
 Class used to `dump / fetch` images needs to implement `ImageSyncInterface`
+
 #### Default Image sync: `LocalFile`
+
 * Files are copied to target location when patch file is created
-* Files are copied from configured location to Magento 2 `media` folded 
+* Files are copied from configured location to Magento 2 `media` folded
 
 ### Adding new Image Sync Models:
+
 Image Sync Models are passed into `array` of `ImageSync` class via `DI.XML`
 ```xml
-    <type name="Nanobots\DataPatchCreator\Model\ImagesSync\ImageSync">
+    <type name="Qoliber\DataPatchCreator\Model\ImagesSync\ImageSync">
         <arguments>
             <argument name="syncModels" xsi:type="array">
-                <item name="LocalFile" xsi:type="object">Nanobots\DataPatchCreator\Model\ImagesSync\LocalFile</item>
+                <item name="LocalFile" xsi:type="object">Qoliber\DataPatchCreator\Model\ImagesSync\LocalFile</item>
             </argument>
         </arguments>
     </type>
@@ -84,7 +91,7 @@ array key passed in `di.xml`.
 
 For example:
 ```xml
-    <type name="Nanobots\DataPatchCreator\Model\ImagesSync\ImageSync">
+    <type name="Qoliber\DataPatchCreator\Model\ImagesSync\ImageSync">
         <arguments>
             <argument name="syncModels" xsi:type="array">
                 <item name="AmazonS3" xsi:type="object">YourVendor\YourModule\ImagesSync\AmazonS3</item>
@@ -101,4 +108,5 @@ For example:
 Setting configuration in the admin panel will make force usage of your module for images sync.
 
 ### Suggested Packages:
-* PageBuilder Compatibility: https://github.com/enanobots/m2-datapatchcreator-pagebuilder-compatibility
+
+* PageBuilder Compatibility: https://github.com/qoliber/m2-datapatchcreator-pagebuilder-compatibility

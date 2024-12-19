@@ -1,40 +1,28 @@
 {
-    "name": "enanobots/m2-datapatchcreator",
-    "description": "Magento 2 Data Patch creator",
-    "homepage": "https://github.com/enanobots/m2-datapatchcreator",
-    "type": "magento2-module",
-    "license": "MIT",
+    "name": "qoliber/m2-datapatchcreator",
+    "version": "2.0.0",
+    "source": {
+        "type": "git",
+        "url": "git@github.com:qoliber/m2-datapatchcreator.git",
+        "reference": "master"
+    },
     "authors": [
         {
-            "email": "nanobotsecommerce@gmail.com",
-            "name": "eCommerce Nanobots"
-        },
-        {
-            "name": "Jakub Winkler",
-            "email": "jwinkler@qsolutionsstudio.com"
-        },
-        {
-            "name": "Sebastian Strojwas",
-            "email": "sebastian@qsolutionsstudio.com"
-        },
-        {
-            "name": "Wojtek Wnuk",
-            "email": "wojtek@qsolutionsstudio.com"
+            "name": "qoliber",
+            "email": "info@qoliber.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
-        "php": ">=7.3"
+        "php": ">=8.1",
+        "qoliber/core": "*"
     },
+    "license": "MIT",
     "autoload": {
         "files": [
-            "src/registration.php"
+            "registration.php"
         ],
         "psr-4": {
-            "Nanobots\\DataPatchCreator\\": "src/"
+            "Qoliber\\DataPatchCreator\\": ""
         }
-    },
-    "suggest": {
-        "enanobots/m2-datapatchcreator-pagebuilder": "Magento 2 Page Builder Compatibility"
     }
 }
